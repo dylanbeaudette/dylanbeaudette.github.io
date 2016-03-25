@@ -1,0 +1,136 @@
+---
+output:
+  html_document:
+    code_folding: hide
+    mathjax: null
+    jquery: null
+    smart: no
+    keep_md: no
+---
+
+```{r setup, echo=FALSE, results='hide', warning=FALSE, message=FALSE}
+# setup
+library(knitr, quietly=TRUE)
+opts_chunk$set(message=FALSE, warning=FALSE, background='#F7F7F7', fig.align='center', fig.retina=2, dev='png', antialias='cleartype', tidy=FALSE, verbose=FALSE)
+options(width=100, stringsAsFactors=FALSE, cache=TRUE)
+```
+
+Geomoprhons vs. Field Data (MLRA 17, 18, 22A)
+==================================
+2016-03-25
+<br>
+D.E. Beaudette
+
+
+
+A quick comparison between field described surface shape (NASIS pedons) and 30m [geomorphons](https://grass.osgeo.org/grass70/manuals/addons/r.geomorphon.html).
+
+
+```{r fig.width=12, fig.height=12}
+library(RColorBrewer)
+library(soilDB)
+library(raster)
+library(lattice)
+# library(e1071) 
+
+# "nice" colors
+cols <- c(rev(brewer.pal(11, 'Spectral')))
+col.palette <- colorRampPalette(cols)
+
+# data
+x <- fetchNASIS(rmHzErrors = FALSE)
+r <- raster('E:/gis_data/region-2-mu-analysis/forms30_region2.tif')
+
+## quick hack to keep reasonable coordinates
+# keep only those pedons with coordinates
+good.idx <- which(!is.na(x$x_std) & !is.na(x$y_std) & x$x_std < 0 & x$y_std > 0)
+x.sub <- x[good.idx, ]
+
+# init coordinates
+coordinates(x.sub) <- ~ x_std + y_std
+proj4string(x.sub) <- '+proj=longlat +datum=NAD83'
+
+## TODO: consider using a buffer
+# extract geomorphons and set levels
+x.sub$geomorphons <- extract(r, as(x.sub, 'SpatialPointsDataFrame'))
+x.sub$geomorphons <- factor(x.sub$geomorphons, levels=1:10, labels=c('flat', 'summit', 'ridge', 'shoulder', 'spur', 'slope', 'hollow', 'footslope', 'valley', 'depression'))
+
+## hillslope position
+this.data <- xtabs(~ geomorphons + hillslope_pos, data=site(x.sub))
+this.data[this.data == 0] <- NA
+# col.palette <- colorRampPalette(cols, bias=1/skewness(as.vector(this.data), na.rm = TRUE))
+
+levelplot(this.data, col.regions=col.palette, colorkey=list(tick.number=15), xlab='30m Geomorphons', ylab='Field Described Hillslope Position', main='MLRA 17, 18, 22A Pedons', scales=list(alternating=3), panel=function(x, y, z, ...) {
+  panel.levelplot(x, y, z, ...)
+  idx <- which(!is.na(z))
+  panel.text(x[idx], y[idx], z[idx], font=2)
+  panel.abline(h=seq(from=0.5, to=length(y), by=1), col=grey(0.45))
+  panel.abline(v=seq(from=0.5, to=length(x), by=1), col=grey(0.45))
+})
+
+
+## 3D slope shape
+this.data <- xtabs(~ geomorphons + slope_shape, data=site(x.sub))
+this.data[this.data == 0] <- NA
+
+levelplot(this.data, col.regions=col.palette, colorkey=list(tick.number=15), xlab='30m Geomorphons', ylab='Field Described Curvature (Across / Down)', main='MLRA 17, 18, 22A Pedons', scales=list(alternating=3), panel=function(x, y, z, ...) {
+  panel.levelplot(x, y, z, ...)
+  idx <- which(!is.na(z))
+  panel.text(x[idx], y[idx], z[idx], font=2)
+  panel.abline(h=seq(from=0.5, to=length(y), by=1), col=grey(0.45))
+  panel.abline(v=seq(from=0.5, to=length(x), by=1), col=grey(0.45))
+})
+
+
+## slope position
+this.data <- xtabs(~ geomorphons + slope_position, data=site(x.sub))
+this.data[this.data == 0] <- NA
+
+levelplot(this.data, col.regions=col.palette, colorkey=list(tick.number=15), xlab='30m Geomorphons', ylab='Field Described Slope Position', main='MLRA 17, 18, 22A Pedons', scales=list(alternating=3), panel=function(x, y, z, ...) {
+  panel.levelplot(x, y, z, ...)
+  idx <- which(!is.na(z))
+  panel.text(x[idx], y[idx], z[idx], font=2)
+  panel.abline(h=seq(from=0.5, to=length(y), by=1), col=grey(0.45))
+  panel.abline(v=seq(from=0.5, to=length(x), by=1), col=grey(0.45))
+})
+
+
+## geomorphic component -- hills
+this.data <- xtabs(~ geomorphons + geompos_hill, data=site(x.sub))
+this.data[this.data == 0] <- NA
+
+levelplot(this.data, col.regions=col.palette, colorkey=list(tick.number=15), xlab='30m Geomorphons', ylab='Field Described Geomorphic Component', main='MLRA 17, 18, 22A Pedons', scales=list(alternating=3), panel=function(x, y, z, ...) {
+  panel.levelplot(x, y, z, ...)
+  idx <- which(!is.na(z))
+  panel.text(x[idx], y[idx], z[idx], font=2)
+  panel.abline(h=seq(from=0.5, to=length(y), by=1), col=grey(0.45))
+  panel.abline(v=seq(from=0.5, to=length(x), by=1), col=grey(0.45))
+})
+
+
+## geomorphic component -- mountains
+this.data <- xtabs(~ geomorphons + geompos_mntn, data=site(x.sub))
+this.data[this.data == 0] <- NA
+
+levelplot(this.data, col.regions=col.palette, colorkey=list(tick.number=15), xlab='30m Geomorphons', ylab='Field Described Geomorphic Component', main='MLRA 17, 18, 22A Pedons', scales=list(alternating=3), panel=function(x, y, z, ...) {
+  panel.levelplot(x, y, z, ...)
+  idx <- which(!is.na(z))
+  panel.text(x[idx], y[idx], z[idx], font=2)
+  panel.abline(h=seq(from=0.5, to=length(y), by=1), col=grey(0.45))
+  panel.abline(v=seq(from=0.5, to=length(x), by=1), col=grey(0.45))
+})
+
+
+## geomorphic component -- flats
+this.data <- xtabs(~ geomorphons + geompos_flats, data=site(x.sub))
+this.data[this.data == 0] <- NA
+
+levelplot(this.data, col.regions=col.palette, colorkey=list(tick.number=15), xlab='30m Geomorphons', ylab='Field Described Geomorphic Component', main='MLRA 17, 18, 22A Pedons', scales=list(alternating=3), panel=function(x, y, z, ...) {
+  panel.levelplot(x, y, z, ...)
+  idx <- which(!is.na(z))
+  panel.text(x[idx], y[idx], z[idx], font=2)
+  panel.abline(h=seq(from=0.5, to=length(y), by=1), col=grey(0.45))
+  panel.abline(v=seq(from=0.5, to=length(x), by=1), col=grey(0.45))
+})
+```
+

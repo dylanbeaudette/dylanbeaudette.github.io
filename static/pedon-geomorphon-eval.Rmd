@@ -41,6 +41,10 @@ col.palette <- colorRampPalette(cols)
 x <- fetchNASIS(rmHzErrors = FALSE)
 r <- raster('E:/gis_data/region-2-mu-analysis/forms30_region2.tif')
 
+# # filter out SEKI pedons
+# idx <- grep('CA792', x$site_id)
+# x <- x[idx, ]
+
 ## quick hack to keep reasonable coordinates
 # keep only those pedons with coordinates
 good.idx <- which(!is.na(x$x_std) & !is.na(x$y_std) & x$x_std < 0 & x$y_std > 0)

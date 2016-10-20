@@ -17,14 +17,37 @@ D.E. Beaudette
 
 [PDF version](files/common-soil-minerals.pdf)
 
-You probably noticed the *minor* technical error: humus is not a soil mineral. Note that these colors were derived from a set of pure specimens under ideal lighting conditions. Soil colors in the field represent a complex moisture of pigments that are expressed differently as a function of particle size, organic matter content, water content, viewing angle, and lighting conditions (and many other factors of course). Have a look at some of the links below for more information on soil color.
+## Major Pigmenting Agents in the Soil
+You probably noticed the *minor* technical error: humus is not a soil mineral. 
+
+Note that these colors were derived from a set of pure specimens under ideal lighting conditions. Soil colors in the field represent a complex moisture of pigments that are expressed differently as a function of particle size, organic matter content, water content, viewing angle, and lighting conditions (and many other factors of course). Have a look at some of the links below for more information on soil color.
 
 Colors are organized according to a [divisive hierarchical clustering](https://en.wikipedia.org/wiki/Hierarchical_clustering#Divisive_clustering) of [CIE LAB](https://en.wikipedia.org/wiki/Lab_color_space) coordinates. Conversion of Munsell colors to RGB was performed with the `munsell2rgb()` function from the [aqp](https://github.com/ncss-tech/aqp) package for R. Conversion of RGB to LAB coordinates was performed with the [colorspace](https://cran.r-project.org/web/packages/colorspace/index.html) package for R.
+
+### Iron Oxides in the Soil Environment
+|Iron Oxide     |Soil Environment                                        |
+|:--------------|:-------------------------------------------------------|
+|Goethite       |All weathering regimes; greater amounts with cool, wet climates and elevated organic matter (including higher altitudes and moist/cool aspects)|
+|Magnetite      |Usually considered to be inherited from parent material and occurs in teh sand and silt fractions of moist soils|
+|Hematite       |Aerobic soils of the tropics, subtropics, arid, and semiaride zones, and Mediterranean climates; greater amounts with warmer temperatures and lower organic matter contents|
+|Maghemite      |Highly weathered soils of the tropics and subtropics derived from mafic rocks rich in precursor magnetite and/or soils subjected to burning in the presence of organic matter|
+|Lepidocrocite  |Seasonally anaerobic, noncalcareous soils of cool-temperate climates (including higher altitudes and moist and cool aspects on mid to lower slopes)|
+|Ferrihydrite   |Soils subjected to rapid oxidation of iron in the presence organic matter|
+|Schwertmannite |Acid sulfate soils of both coastal and inland areas; anthropogenic sites including mines, spoils, and tailings|
+
+Table: Adapted from Bigham et al. (2002).
+
+
+
+### Iron Oxide Formation and Transformation
+<img src="images/iron-oxide-wx-pathways.jpg" style="width:100%; overflow:hidden;">
+(Bigham et al., 2002)
 
 
 ## Links / Sources
  * [The Color of Soil](http://www.nrcs.usda.gov/wps/portal/nrcs/detail/soils/edu/?cid=nrcs142p2_054286)
- * Schwertmann, U. 1993. Relations Between Iron Oxides, Soil Color, and Soil Formation. "Soil Color". SSSA Special Publication no. 31, pages 51--69.
+ * Schwertmann, U. 1993. "Relations Between Iron Oxides, Soil Color, and Soil Formation". Soil Color. SSSA Special Publication no. 31, pages 51--69.
+ * Bigham J.M., Fitzpatrick R.W., and Schulze D.G. 2002. "Iron Oxides" <i>in</i> Soil Mineralogy with Environmental Applications. SSSA Book Series: 7, pages 323--366.
  * [The color scheme of carbon content: A simpler approach to gauging soil health](https://www.soils.org/discover-soils/story/color-scheme-carbon-content-simpler-approach-gauging-soil-health)
  * [Soil color never lies](http://blogs.egu.eu/divisions/sss/2014/03/30/soil-color-never-lies/)
  * [Wikipedia page on "Iron"](https://en.wikipedia.org/wiki/Iron)

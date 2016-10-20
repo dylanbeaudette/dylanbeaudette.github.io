@@ -28,10 +28,10 @@ Colors are organized according to a [divisive hierarchical clustering](https://e
 |Iron Oxide     |Soil Environment                                        |
 |:--------------|:-------------------------------------------------------|
 |Goethite       |All weathering regimes; greater amounts with cool, wet climates and elevated organic matter (including higher altitudes and moist/cool aspects)|
-|Magnetite      |Usually considered to be inherited from parent material and occurs in teh sand and silt fractions of moist soils|
-|Hematite       |Aerobic soils of the tropics, subtropics, arid, and semiaride zones, and Mediterranean climates; greater amounts with warmer temperatures and lower organic matter contents|
+|Magnetite      |Usually considered to be inherited from parent material and occurs in the sand and silt fractions of moist soils|
+|Hematite       |Aerobic soils of the tropics, subtropics, arid, and semiarid zones, and Mediterranean climates; greater amounts with warmer temperatures and lower organic matter contents|
 |Maghemite      |Highly weathered soils of the tropics and subtropics derived from mafic rocks rich in precursor magnetite and/or soils subjected to burning in the presence of organic matter|
-|Lepidocrocite  |Seasonally anaerobic, noncalcareous soils of cool-temperate climates (including higher altitudes and moist and cool aspects on mid to lower slopes)|
+|Lepidocrocite  |Seasonally anaerobic, non-calcareous soils of cool-temperate climates (including higher altitudes and moist and cool aspects on mid to lower slopes)|
 |Ferrihydrite   |Soils subjected to rapid oxidation of iron in the presence organic matter|
 |Schwertmannite |Acid sulfate soils of both coastal and inland areas; anthropogenic sites including mines, spoils, and tailings|
 

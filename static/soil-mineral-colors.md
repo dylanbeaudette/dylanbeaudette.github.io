@@ -6,7 +6,7 @@ output:
     smart: no
 ---
 
-Munsell Colors for Some Soil Minerals
+Coloring Agents in the Soil Environment
 ==================================
 2016-10-20
 <br>
@@ -18,7 +18,7 @@ D.E. Beaudette
 [PDF version](files/common-soil-minerals.pdf)
 
 ## Major Pigmenting Agents in the Soil
-You probably noticed the *minor* technical error: humus is not a soil mineral. 
+You probably noticed the *minor* technical error: humus is not a soil mineral. However, it is a helpful benchmark for comparison so we will leave it in the figure.
 
 Note that these colors were derived from a set of pure specimens under ideal lighting conditions. Soil colors in the field represent a complex moisture of pigments that are expressed differently as a function of particle size, organic matter content, water content, viewing angle, and lighting conditions (and many other factors of course). Have a look at some of the links below for more information on soil color.
 
@@ -53,6 +53,7 @@ Table: Adapted from Bigham et al. (2002).
  * [Wikipedia page on "Iron"](https://en.wikipedia.org/wiki/Iron)
  * [Soil Color Aggregation with aqp](http://ncss-tech.github.io/AQP/sharpshootR/aggregate-soil-color.html)
  * [Color Pencils by Munsell Color](http://colour.granjow.net/fabercastell-polychromos.html)
+ * [Soil color analysis for statistically estimating total carbon, total nitrogen and active iron contents in Japanese agricultural soils](http://www.tandfonline.com/doi/pdf/10.1080/00380768.2014.906295)
 
 ## R Code
 You will probably need the latest version of [aqp](https://github.com/ncss-tech/aqp):

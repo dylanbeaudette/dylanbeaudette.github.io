@@ -8,7 +8,7 @@ output:
 
 Coloring Agents in the Soil Environment
 ==================================
-2016-10-20
+2016-10-25
 <br>
 D.E. Beaudette
 
@@ -78,9 +78,9 @@ n <- ceiling(sqrt(nrow(soil_minerals)))
 # read from top-left to bottom-right
 g <- expand.grid(x=1:n, y=n:1)[1:nrow(soil_minerals),]
 
-# convert Munsell -> RGB -> LAB
+# convert Munsell -> sRGB -> LAB
 col.rgb <- munsell2rgb(soil_minerals$hue, soil_minerals$value, soil_minerals$chroma, return_triplets = TRUE)
-col.lab <- as(RGB(as.matrix(col.rgb)), 'LAB')@coords
+col.lab <- as(sRGB(as.matrix(col.rgb)), 'LAB')@coords
 row.names(col.lab) <- soil_minerals$mineral
 
 # divisive hierarchical clustering of LAB coordinates
@@ -102,7 +102,7 @@ mtext('http://www.nrcs.usda.gov/wps/portal/nrcs/detail/soils/edu/?cid=nrcs142p2_
 mtext('U. Schwertmann, 1993. SSSA Special Publication no. 31, pages 51--69', side=1, cex=0.75, line=-0.5)
 
 # dendrogram + tip labels with mineral colors
-plot(p, cex=0.85, label.offset=1, font=1)
+plot(p, cex=0.85, label.offset=1.5, font=1)
 tiplabels(pch=15, cex=4, col=soil_minerals$col)
 
 # dev.off()

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<title></title>
+
+
+
+
+
+
+<link href="data:text/css;charset=utf-8,body%20%7B%0Abackground%2Dcolor%3A%20%23fff%3B%0Amargin%3A%201em%20auto%3B%0Amax%2Dwidth%3A%20700px%3B%0Aoverflow%3A%20visible%3B%0Apadding%2Dleft%3A%202em%3B%0Apadding%2Dright%3A%202em%3B%0Afont%2Dfamily%3A%20%22Open%20Sans%22%2C%20%22Helvetica%20Neue%22%2C%20Helvetica%2C%20Arial%2C%20sans%2Dserif%3B%0Afont%2Dsize%3A%2014px%3B%0Aline%2Dheight%3A%201%2E35%3B%0A%7D%0A%23header%20%7B%0Atext%2Dalign%3A%20center%3B%0A%7D%0A%23TOC%20%7B%0Aclear%3A%20both%3B%0Amargin%3A%200%200%2010px%2010px%3B%0Apadding%3A%204px%3B%0Awidth%3A%20400px%3B%0Aborder%3A%201px%20solid%20%23CCCCCC%3B%0Aborder%2Dradius%3A%205px%3B%0Abackground%2Dcolor%3A%20%23f6f6f6%3B%0Afont%2Dsize%3A%2013px%3B%0Aline%2Dheight%3A%201%2E3%3B%0A%7D%0A%23TOC%20%2Etoctitle%20%7B%0Afont%2Dweight%3A%20bold%3B%0Afont%2Dsize%3A%2015px%3B%0Amargin%2Dleft%3A%205px%3B%0A%7D%0A%23TOC%20ul%20%7B%0Apadding%2Dleft%3A%2040px%3B%0Amargin%2Dleft%3A%20%2D1%2E5em%3B%0Amargin%2Dtop%3A%205px%3B%0Amargin%2Dbottom%3A%205px%3B%0A%7D%0A%23TOC%20ul%20ul%20%7B%0Amargin%2Dleft%3A%20%2D2em%3B%0A%7D%0A%23TOC%20li%20%7B%0Aline%2Dheight%3A%2016px%3B%0A%7D%0Atable%20%7B%0Amargin%3A%201em%20auto%3B%0Aborder%2Dwidth%3A%201px%3B%0Aborder%2Dcolor%3A%20%23DDDDDD%3B%0Aborder%2Dstyle%3A%20outset%3B%0Aborder%2Dcollapse%3A%20collapse%3B%0A%7D%0Atable%20th%20%7B%0Aborder%2Dwidth%3A%202px%3B%0Apadding%3A%205px%3B%0Aborder%2Dstyle%3A%20inset%3B%0A%7D%0Atable%20td%20%7B%0Aborder%2Dwidth%3A%201px%3B%0Aborder%2Dstyle%3A%20inset%3B%0Aline%2Dheight%3A%2018px%3B%0Apadding%3A%205px%205px%3B%0A%7D%0Atable%2C%20table%20th%2C%20table%20td%20%7B%0Aborder%2Dleft%2Dstyle%3A%20none%3B%0Aborder%2Dright%2Dstyle%3A%20none%3B%0A%7D%0Atable%20thead%2C%20table%20tr%2Eeven%20%7B%0Abackground%2Dcolor%3A%20%23f7f7f7%3B%0A%7D%0Ap%20%7B%0Amargin%3A%200%2E5em%200%3B%0A%7D%0Ablockquote%20%7B%0Abackground%2Dcolor%3A%20%23f6f6f6%3B%0Apadding%3A%200%2E25em%200%2E75em%3B%0A%7D%0Ahr%20%7B%0Aborder%2Dstyle%3A%20solid%3B%0Aborder%3A%20none%3B%0Aborder%2Dtop%3A%201px%20solid%20%23777%3B%0Amargin%3A%2028px%200%3B%0A%7D%0Adl%20%7B%0Amargin%2Dleft%3A%200%3B%0A%7D%0Adl%20dd%20%7B%0Amargin%2Dbottom%3A%2013px%3B%0Amargin%2Dleft%3A%2013px%3B%0A%7D%0Adl%20dt%20%7B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0Aul%20%7B%0Amargin%2Dtop%3A%200%3B%0A%7D%0Aul%20li%20%7B%0Alist%2Dstyle%3A%20circle%20outside%3B%0A%7D%0Aul%20ul%20%7B%0Amargin%2Dbottom%3A%200%3B%0A%7D%0Apre%2C%20code%20%7B%0Abackground%2Dcolor%3A%20%23f7f7f7%3B%0Aborder%2Dradius%3A%203px%3B%0Acolor%3A%20%23333%3B%0Awhite%2Dspace%3A%20pre%2Dwrap%3B%20%0A%7D%0Apre%20%7B%0Aborder%2Dradius%3A%203px%3B%0Amargin%3A%205px%200px%2010px%200px%3B%0Apadding%3A%2010px%3B%0A%7D%0Apre%3Anot%28%5Bclass%5D%29%20%7B%0Abackground%2Dcolor%3A%20%23f7f7f7%3B%0A%7D%0Acode%20%7B%0Afont%2Dfamily%3A%20Consolas%2C%20Monaco%2C%20%27Courier%20New%27%2C%20monospace%3B%0Afont%2Dsize%3A%2085%25%3B%0A%7D%0Ap%20%3E%20code%2C%20li%20%3E%20code%20%7B%0Apadding%3A%202px%200px%3B%0A%7D%0Adiv%2Efigure%20%7B%0Atext%2Dalign%3A%20center%3B%0A%7D%0Aimg%20%7B%0Abackground%2Dcolor%3A%20%23FFFFFF%3B%0Apadding%3A%202px%3B%0Aborder%3A%201px%20solid%20%23DDDDDD%3B%0Aborder%2Dradius%3A%203px%3B%0Aborder%3A%201px%20solid%20%23CCCCCC%3B%0Amargin%3A%200%205px%3B%0A%7D%0Ah1%20%7B%0Amargin%2Dtop%3A%200%3B%0Afont%2Dsize%3A%2035px%3B%0Aline%2Dheight%3A%2040px%3B%0A%7D%0Ah2%20%7B%0Aborder%2Dbottom%3A%204px%20solid%20%23f7f7f7%3B%0Apadding%2Dtop%3A%2010px%3B%0Apadding%2Dbottom%3A%202px%3B%0Afont%2Dsize%3A%20145%25%3B%0A%7D%0Ah3%20%7B%0Aborder%2Dbottom%3A%202px%20solid%20%23f7f7f7%3B%0Apadding%2Dtop%3A%2010px%3B%0Afont%2Dsize%3A%20120%25%3B%0A%7D%0Ah4%20%7B%0Aborder%2Dbottom%3A%201px%20solid%20%23f7f7f7%3B%0Amargin%2Dleft%3A%208px%3B%0Afont%2Dsize%3A%20105%25%3B%0A%7D%0Ah5%2C%20h6%20%7B%0Aborder%2Dbottom%3A%201px%20solid%20%23ccc%3B%0Afont%2Dsize%3A%20105%25%3B%0A%7D%0Aa%20%7B%0Acolor%3A%20%230033dd%3B%0Atext%2Ddecoration%3A%20none%3B%0A%7D%0Aa%3Ahover%20%7B%0Acolor%3A%20%236666ff%3B%20%7D%0Aa%3Avisited%20%7B%0Acolor%3A%20%23800080%3B%20%7D%0Aa%3Avisited%3Ahover%20%7B%0Acolor%3A%20%23BB00BB%3B%20%7D%0Aa%5Bhref%5E%3D%22http%3A%22%5D%20%7B%0Atext%2Ddecoration%3A%20underline%3B%20%7D%0Aa%5Bhref%5E%3D%22https%3A%22%5D%20%7B%0Atext%2Ddecoration%3A%20underline%3B%20%7D%0A%0Acode%20%3E%20span%2Ekw%20%7B%20color%3A%20%23555%3B%20font%2Dweight%3A%20bold%3B%20%7D%20%0Acode%20%3E%20span%2Edt%20%7B%20color%3A%20%23902000%3B%20%7D%20%0Acode%20%3E%20span%2Edv%20%7B%20color%3A%20%2340a070%3B%20%7D%20%0Acode%20%3E%20span%2Ebn%20%7B%20color%3A%20%23d14%3B%20%7D%20%0Acode%20%3E%20span%2Efl%20%7B%20color%3A%20%23d14%3B%20%7D%20%0Acode%20%3E%20span%2Ech%20%7B%20color%3A%20%23d14%3B%20%7D%20%0Acode%20%3E%20span%2Est%20%7B%20color%3A%20%23d14%3B%20%7D%20%0Acode%20%3E%20span%2Eco%20%7B%20color%3A%20%23888888%3B%20font%2Dstyle%3A%20italic%3B%20%7D%20%0Acode%20%3E%20span%2Eot%20%7B%20color%3A%20%23007020%3B%20%7D%20%0Acode%20%3E%20span%2Eal%20%7B%20color%3A%20%23ff0000%3B%20font%2Dweight%3A%20bold%3B%20%7D%20%0Acode%20%3E%20span%2Efu%20%7B%20color%3A%20%23900%3B%20font%2Dweight%3A%20bold%3B%20%7D%20%20code%20%3E%20span%2Eer%20%7B%20color%3A%20%23a61717%3B%20background%2Dcolor%3A%20%23e3d2d2%3B%20%7D%20%0A" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+
+
+
+
+
+
+
+<div id="usda-nrcs-ncss-soil-data-sources" class="section level1">
+<h1>USDA-NRCS / NCSS Soil Data Sources</h1>
+<p>2016-11-02 <br> D.E. Beaudette</p>
+<div id="usda-nrcs-official-data-sources" class="section level2">
+<h2>USDA-NRCS &quot;Official&quot; Data Sources</h2>
+<p><a href="http://www.nrcs.usda.gov/wps/portal/nrcs/main/soils/survey/geo/">Digital Soil Survey Databases</a>:</p>
+<ul>
+<li>SSURGO</li>
+<li>STATSGO</li>
+<li>MLRA</li>
+</ul>
+<div id="web-soil-survey-wss" class="section level3">
+<h3>Web Soil Survey (WSS)</h3>
+<p><a href="http://websoilsurvey.sc.egov.usda.gov/App/HomePage.htm">WSS</a></p>
+</div>
+<div id="soil-data-access-sda" class="section level3">
+<h3>Soil Data Access (SDA)</h3>
+<p><a href="http://sdmdataaccess.nrcs.usda.gov/">SDA</a></p>
+</div>
+<div id="official-series-descriptions-osd" class="section level3">
+<h3>Official Series Descriptions (OSD)</h3>
+<ul>
+<li><a href="https://soilseries.sc.egov.usda.gov/osdname.aspx">OSD Search</a></li>
+<li><a href="https://soilseries.sc.egov.usda.gov/osdlist.aspx">Multiple OSD Search</a></li>
+<li><a href="https://soilseries.sc.egov.usda.gov/osdquery.aspx">OSD Search via Soil Classification (SC) Database</a></li>
+</ul>
+</div>
+<div id="kssl-databases" class="section level3">
+<h3>KSSL Databases</h3>
+<ul>
+<li><a href="http://ncsslabdatamart.sc.egov.usda.gov/">Basic Query / Home Page</a></li>
+<li><a href="http://ncsslabdatamart.sc.egov.usda.gov/advquery.aspx">Advanced Query</a></li>
+</ul>
+</div>
+<div id="scan-snotel" class="section level3">
+<h3>SCAN / SNOTEL</h3>
+<ul>
+<li><a href="http://www.wcc.nrcs.usda.gov/scan/">SCAN</a></li>
+<li><a href="http://www.wcc.nrcs.usda.gov/snow/">SNOTEL</a></li>
+</ul>
+</div>
+<div id="block-diagrams" class="section level3">
+<h3>Block Diagrams</h3>
+<p><a href="http://www.nrcs.usda.gov/wps/portal/nrcs/detail/soils/survey/geo/?cid=nrcs142p2_054317">Historic Block Diagram Archive</a></p>
+</div>
+<div id="nasis" class="section level3">
+<h3>NASIS</h3>
+<p><a href="http://www.nrcs.usda.gov/wps/portal/nrcs/detail/soils/survey/geo/?cid=nrcs142p2_053552">Homepage</a></p>
+</div>
+</div>
+<div id="soilweb-ucdnrcs-collaboration" class="section level2">
+<h2>SoilWeb: UCD/NRCS Collaboration</h2>
+<p><a href="https://casoilresource.lawr.ucdavis.edu/soilweb-apps">SoilWeb Home</a></p>
+<div id="soilweb-google-maps" class="section level3">
+<h3>SoilWeb Google Maps</h3>
+<p><a href="http://casoilresource.lawr.ucdavis.edu/gmap/">SoilWeb Gmaps</a></p>
+<p><a href="http://casoilresource.lawr.ucdavis.edu/soil_web/ssurgo.php">Text-Only Interface</a></p>
+</div>
+<div id="soilweb-google-earth" class="section level3">
+<h3>SoilWeb Google Earth</h3>
+<p><a href="http://casoilresource.lawr.ucdavis.edu/soil_web/kml/SoilWeb.kmz">KMZ Link</a></p>
+</div>
+<div id="soilweb-for-smartphones" class="section level3">
+<h3>SoilWeb for Smartphones</h3>
+<ul>
+<li><a href="http://itunes.apple.com/us/app/soilweb-for-the-iphone/id354911787?mt=8">iOS</a></li>
+<li><a href="https://play.google.com/store/apps/details?id=casoilresource.apps.soilweb&amp;hl=en">Android</a></li>
+</ul>
+</div>
+<div id="series-extent-explorer-see" class="section level3">
+<h3>Series Extent Explorer (SEE)</h3>
+<p><a href="http://casoilresource.lawr.ucdavis.edu/see/">SEE</a></p>
+</div>
+<div id="series-data-explorer-sde" class="section level3">
+<h3>Series Data Explorer (SDE)</h3>
+<ul>
+<li><a href="http://casoilresource.lawr.ucdavis.edu/sde/?series=amador">Amador Series</a></li>
+<li><a href="https://casoilresource.lawr.ucdavis.edu/sde/?series=san%20joaquin">San Joaquin Series</a></li>
+<li><a href="https://casoilresource.lawr.ucdavis.edu/sde/?series=pierre">Pierre</a></li>
+<li><a href="https://casoilresource.lawr.ucdavis.edu/sde/?series=cecil">cecil</a></li>
+</ul>
+</div>
+<div id="osd-fulltext-search" class="section level3">
+<h3>OSD Fulltext Search</h3>
+<ul>
+<li><a href="http://soilmap2-1.lawr.ucdavis.edu/dylan/soilweb/osd-fulltext/">search entire OSD</a></li>
+<li><a href="http://soilmap2-1.lawr.ucdavis.edu/dylan/soilweb/osd-fulltext/sections.php">search by section</a></li>
+</ul>
+</div>
+<div id="ca-soil-properties" class="section level3">
+<h3>CA Soil Properties</h3>
+<p><a href="http://casoilresource.lawr.ucdavis.edu/ca-soil-properties/">CA Soil Properties</a></p>
+</div>
+</div>
+<div id="r-interfaces-soildb-package" class="section level2">
+<h2>R Interfaces: <code>soilDB</code> Package</h2>
+<p><a href="http://ncss-tech.github.io/AQP/">Project Homepage</a></p>
+<ol style="list-style-type: decimal">
+<li><a href="http://ncss-tech.github.io/AQP/soilDB/KSSL-demo.html"><code>fetchKSSL()</code></a>: Lab data, <a href="https://github.com/dylanbeaudette/process-kssl-snapshot">processing details</a>.</li>
+<li><a href="http://ncss-tech.github.io/AQP/sharpshootR/OSD-dendrogram.html"><code>fetchOSD()</code></a>: Select data elements parsed from OSD text files.</li>
+<li><a href="http://ncss-tech.github.io/AQP/soilDB/fetchNASIS-mini-tutorial.html"><code>fetchNASIS()</code></a>: Simple interface to NASIS local database.</li>
+<li><a href="http://ncss-tech.github.io/AQP/soilDB/fetchSCAN-demo.html"><code>fetchSCAN()</code></a>: Unified interface to SCAN/SNOTEL data.</li>
+<li><a href="http://ncss-tech.github.io/AQP/soilDB/series-extent.html"><code>seriesExtent()</code></a>: Get series extent data from SoilWeb/SEE.</li>
+<li><a href="http://ncss-tech.github.io/AQP/soilDB/SDA-tutorial.html"><code>SDA_query()</code></a>: Wrapper to SDA web-service.</li>
+</ol>
+</div>
+</div>
+
+
+
+
+</body>
+</html>

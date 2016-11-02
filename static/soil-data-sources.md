@@ -159,3 +159,18 @@ Soil properties gridded at 1km resolution, based on SSURGO with holes filled usi
  6. [`SDA_query()`](http://ncss-tech.github.io/AQP/soilDB/SDA-tutorial.html): Wrapper to SDA web-service.
 
 
+## PSU Soil Survey Applications
+
+### MLRA Explorer
+
+[MLRA Explorer](http://apps.cei.psu.edu/mlra/)
+
+
+### Isee
+
+[Isee](http://isee.purdue.edu/)
+
+
+
+
+

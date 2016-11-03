@@ -22,11 +22,12 @@ D.E. Beaudette
   * MLRA
 
 
-### Web Soil Survey (WSS)
+### Web Soil Survey and Geospatial Data Gateway
 
 This is the official source of the soil survey data, interpretations, and SSURGO databases.
 
-[WSS](http://websoilsurvey.sc.egov.usda.gov/App/HomePage.htm)
+ * [WSS](http://websoilsurvey.sc.egov.usda.gov/App/HomePage.htm)
+ * [GDG](http://datagateway.nrcs.usda.gov/)
 
 
 
@@ -52,6 +53,11 @@ These pages provide search and download facilities for soil characterization dat
 
   * [Basic Query / Home Page](http://ncsslabdatamart.sc.egov.usda.gov/)
   * [Advanced Query](http://ncsslabdatamart.sc.egov.usda.gov/advquery.aspx)
+
+
+### Archived Soil Survey Manuscripts
+
+[indexed by state](http://www.nrcs.usda.gov/wps/portal/nrcs/soilsurvey/soils/survey/state/)
 
 
 ### SCAN / SNOTEL

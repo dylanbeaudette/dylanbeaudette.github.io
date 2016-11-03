@@ -24,7 +24,7 @@ D.E. Beaudette
 
 ### Web Soil Survey and Geospatial Data Gateway
 
-This is the official source of the soil survey data, interpretations, and SSURGO databases.
+These are the official sources for digital soil survey data, interpretations, and SSURGO databases.
 
  * [WSS](http://websoilsurvey.sc.egov.usda.gov/App/HomePage.htm)
  * [GDG](http://datagateway.nrcs.usda.gov/)

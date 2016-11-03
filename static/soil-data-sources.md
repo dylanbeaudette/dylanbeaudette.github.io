@@ -28,7 +28,8 @@ These are the official sources for digital soil survey data, interpretations, an
 
  * [WSS](http://websoilsurvey.sc.egov.usda.gov/App/HomePage.htm)
  * [GDG](http://datagateway.nrcs.usda.gov/)
-
+ 
+ The [Soil Data Viewer](http://www.nrcs.usda.gov/wps/portal/nrcs/detailfull/soils/home/?cid=nrcs142p2_053620) is an ArcGIS-based interface to SSURGO data.
 
 
 ### Soil Data Access (SDA)

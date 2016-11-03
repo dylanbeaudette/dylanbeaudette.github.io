@@ -22,7 +22,7 @@ You probably noticed the *minor* technical error: humus is not a soil mineral. H
 
 Note that these colors were derived from a set of pure specimens under ideal lighting conditions. Soil colors in the field represent a complex moisture of pigments that are expressed differently as a function of particle size, organic matter content, water content, viewing angle, and lighting conditions (and many other factors of course). Have a look at some of the links below for more information on soil color.
 
-Colors are organized according to a [divisive hierarchical clustering](https://en.wikipedia.org/wiki/Hierarchical_clustering#Divisive_clustering) of [CIE LAB](https://en.wikipedia.org/wiki/Lab_color_space) coordinates. Conversion of Munsell colors to RGB was performed with the `munsell2rgb()` function from the [aqp](https://github.com/ncss-tech/aqp) package for R. Conversion of RGB to LAB coordinates was performed with the [colorspace](https://cran.r-project.org/web/packages/colorspace/index.html) package for R.
+Colors are organized according to a [divisive hierarchical clustering](https://en.wikipedia.org/wiki/Hierarchical_clustering#Divisive_clustering) of [CIE LAB](https://en.wikipedia.org/wiki/Lab_color_space) coordinates. Conversion of Munsell colors to sRGB was performed with the `munsell2rgb()` function from the [aqp](https://github.com/ncss-tech/aqp) package for R. Conversion of sRGB to LAB coordinates was performed with the [colorspace](https://cran.r-project.org/web/packages/colorspace/index.html) package for R.
 
 ### Iron Oxides in the Soil Environment
 |Iron Oxide     |Soil Environment                                        |

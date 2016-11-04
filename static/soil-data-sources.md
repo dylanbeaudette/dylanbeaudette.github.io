@@ -31,6 +31,8 @@ These are the official sources for digital soil survey data, interpretations, an
  
  The [Soil Data Viewer](http://www.nrcs.usda.gov/wps/portal/nrcs/detailfull/soils/home/?cid=nrcs142p2_053620) is an ArcGIS-based interface to SSURGO data.
 
+[SSURGO on Demand](http://www.nrcs.usda.gov/wps/portal/nrcs/main/wi/soils/) is a reboot of the Soil Data Viewer allowing for the creation of very large thematic maps.
+
 
 ### Soil Data Access (SDA)
 

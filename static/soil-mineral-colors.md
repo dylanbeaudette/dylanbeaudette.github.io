@@ -54,6 +54,7 @@ Table: Adapted from Bigham et al. (2002).
  * [Soil Color Aggregation with aqp](http://ncss-tech.github.io/AQP/sharpshootR/aggregate-soil-color.html)
  * [Color Pencils by Munsell Color](http://colour.granjow.net/fabercastell-polychromos.html)
  * [Soil color analysis for statistically estimating total carbon, total nitrogen and active iron contents in Japanese agricultural soils](http://www.tandfonline.com/doi/pdf/10.1080/00380768.2014.906295)
+ * [Subtleties of Color](http://earthobservatory.nasa.gov/blogs/elegantfigures/2013/08/05/subtleties-of-color-part-1-of-6/)
 
 ## R Code
 You will probably need the latest version of [aqp](https://github.com/ncss-tech/aqp):

@@ -1,4 +1,7 @@
 ---
+title: "Coloring Agents in the Soil Environment"
+author: "D.E. Beaudette"
+date: "`r Sys.Date()`"
 output:
   html_vignette:
     mathjax: null
@@ -6,16 +9,13 @@ output:
     smart: no
 ---
 
-Coloring Agents in the Soil Environment
-==================================
-2016-10-25
-<br>
-D.E. Beaudette
-
 
 <img src="images/common-soil-minerals.png" style="width:100%; overflow:hidden;">
 
-[PDF version](files/common-soil-minerals.pdf)
+PDF Versions:
+
+   * [same as the figure above](files/common-soil-minerals.pdf)
+   * [color chips only](files/soil-pigments.pdf)
 
 ## Major Pigmenting Agents in the Soil
 You probably noticed the *minor* technical error: humus is not a soil mineral. However, it is a helpful benchmark for comparison so we will leave it in the figure.
@@ -105,6 +105,19 @@ mtext('U. Schwertmann, 1993. SSSA Special Publication no. 31, pages 51--69', sid
 # dendrogram + tip labels with mineral colors
 plot(p, cex=0.85, label.offset=1.5, font=1)
 tiplabels(pch=15, cex=4, col=soil_minerals$col)
+
+# dev.off()
+
+## just the color chips
+# pdf(file='soil-pigments.pdf', width=10, height=6, pointsize = 10)
+# 
+par(mar=c(1,1,1,1))
+plot(g$x, g$y, pch=15, cex=12, axes=FALSE, xlab='', ylab='', col=rev(soil_minerals$col[h$order]), xlim=c(0.5,5.5), ylim=c(1.5,5.5))
+text(g$x, g$y, rev(soil_minerals$mineral[h$order]), adj=c(0.45,5), cex=1, font=2)
+text(g$x, g$y, rev(soil_minerals$color[h$order]), col='white', pos=1, cex=0.85, font=2)
+title(main='Common Pigmenting Agents in the Soil', line=-1.5, cex.main=2)
+mtext('http://www.nrcs.usda.gov/wps/portal/nrcs/detail/soils/edu/?cid=nrcs142p2_054286', side=1, cex=0.75, line=-1.5)
+mtext('U. Schwertmann, 1993. SSSA Special Publication no. 31, pages 51--69', side=1, cex=0.75, line=-0.5)
 
 # dev.off()
 ```

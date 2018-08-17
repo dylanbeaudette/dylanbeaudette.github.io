@@ -1,0 +1,12 @@
+https://help.github.com/articles/removing-files-from-a-repository-s-history/
+
+https://stackoverflow.com/questions/8185276/find-size-of-git-repo
+
+# current size
+git count-objects -vH
+
+# clean up
+# https://git-scm.com/docs/git-gc
+git gc
+git count-objects -vH
+
